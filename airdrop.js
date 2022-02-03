@@ -17,7 +17,7 @@ async function getReadLine(message) {
 }
 
 async function airdropNFT() {
-  const keypairPath = await getReadLine("Type keypair path(json): ");
+  const keypairPath = await getReadLine("Type account path(json): ");
   let keypairContent = fs.readFileSync(keypairPath);
   keypairContent = JSON.parse(keypairContent);
 
