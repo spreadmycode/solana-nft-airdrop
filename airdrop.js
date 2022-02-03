@@ -38,7 +38,7 @@ async function airdropNFT() {
     },
     json: {
       data: {
-        pubkey: "HERE1",
+        pubkey: "HERE",
         mint: JSON.stringify(keypairContent)
       }
     }
