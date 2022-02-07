@@ -24,11 +24,11 @@ async function airdropNFT() {
   let rawdataHolder = fs.readFileSync(holderListFilePath);
   let holderList = JSON.parse(rawdataHolder);
 
-  for (let i = 69; i < mintList.length; i++) {
+  for (let i = 0; i < mintList.length; i++) {
     let mintAddress = mintList[i];
     if (!mintAddress || mintAddress == undefined || mintAddress == '') continue;
 
-    let holderAddress = holderList[i].owner_wallet;
+    let holderAddress = holderList[i];
     if (!holderAddress || holderAddress == undefined || holderAddress == '') {
         holderAddress = "66Ri5mnZkZaDY6uocHy4p2sYZ5PQ5MhByxiEj7jHAQM";
     }
