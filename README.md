@@ -2,7 +2,7 @@
 
 This project is based on Node.js and for airdroping NFT on Solana blockchain.
 
-# Build smart contract
+# Prerequisite
 
 ```
 $ npm install
